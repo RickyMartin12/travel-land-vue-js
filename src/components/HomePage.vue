@@ -185,8 +185,6 @@
             else
             {
                 //sendEmail(this.contact_email, this.message);
-
-                
                 const url = `https://server-side-send-email.herokuapp.com/sendEmail?email_from=${this.contact_email}&message=${this.contact_message}`
                 const requestOptions = {
                 method: "GET",
