@@ -4,15 +4,16 @@ const express = require('express');
 const cors = require('cors');
 
 const app = express();
+const port = process.env.PORT || 3000;
 app.use(cors());
 
 let transporter = nodemailer.createTransport({
-    host: "smtp.sendgrid.net",
+    host: "smtp.gmail.com",
     port: 587,
     secure: false,
     auth: {
-      user: "apikey",
-      pass: "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"
+      user: "ricardomanuelpeleira@gmail.com",
+      pass: "qcwrdlcthjenrtln"
     }
   });
 
@@ -42,6 +43,6 @@ app.get('/sendEmail', (req, res) => {
     });
 });
 
-app.listen(9000, () => {
+app.listen(2020, () => {
     console.log('server is listening on port 9000');
 });
